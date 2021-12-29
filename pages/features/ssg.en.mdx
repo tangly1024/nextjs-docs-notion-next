@@ -1,68 +1,12 @@
-# Next.js SSG
-
-With Next.js, you can pre-render your page using [Static Generation (SSG)](https://nextjs.org/docs/basic-features/pages#static-generation-recommended). Your pages will be generated at build time and statically served to visitors. It can also be cached by a CDN to maximize the performance.
-
-This is supported by Nextra too. Here's an example:
-
-import { useSSG } from 'nextra/ssg'
-
-export const getStaticProps = ({ params }) => {
-  return fetch(`https://api.github.com/repos/shuding/nextra`)
-    .then((res) => res.json())
-    .then((repo) => ({
-      props: {
-        // We add an `ssg` field to the page props,
-        // which will be provided to the Nextra `useSSG` hook.
-        ssg: {
-          stars: repo.stargazers_count,
-        },
-      },
-      // The page will be considered as stale and regenerated every 60 seconds.
-      revalidate: 60,
-    }))
-}
-
-export const Stars = () => {
-  // Get the data from SSG, and render it as a component.
-  const { stars } = useSSG()
-  return <strong>{stars}</strong>
-}
-
-<div className="p-4 border border-gray-200 dark:border-gray-900 rounded mt-6">
-  Nextra has <Stars /> stars on GitHub!
-</div>
-
-The number above was generated at build time via `getStaticProps`. With [Incremental Static Regeneration](https://nextjs.org/docs/basic-features/data-fetching#incremental-static-regeneration) enabled, it will keep up to dated.
-
----
-
-Here's the MDX code for the example above:
-
-```js
-import { useSSG } from 'nextra/ssg'
-
-export const getStaticProps = ({ params }) => {
-  return fetch(`https://api.github.com/repos/shuding/nextra`)
-    .then((res) => res.json())
-    .then((repo) => ({
-      props: {
-        // We add an `ssg` field to the page props,
-        // which will be provided to the Nextra `useSSG` hook.
-        ssg: {
-          stars: repo.stargazers_count,
-        },
-      },
-      // The page will be considered as stale and regenerated every 60 seconds.
-      revalidate: 60,
-    }))
-}
-
-export const Stars = () => {
-  // Get the data from SSG, and render it as a component.
-  const { stars } = useSSG()
-  return <strong>{stars}</strong>
-}
+# Static page generation SSG
 
 
-Nextra has <Stars /> stars on GitHub!
-```
+Thanks to NextJs, your Notion page is pre-rendered into Html through [Static Generation (SSG)](https://nextjs.org/docs/basic-features/pages#static-generation-recommended), and your page is compiled It is generated and statically displayed to visitors, and it can also be cached by the CDN to maximize performance.
+
+
+## Incremental static regeneration ISR
+
+
+Next.js allows you to create or update static pages after setting up your website. Incremental Site Rendering [(Incremental Site Rendering)]() enables developers and content editors to use static generation on a per-page basis without the need to rebuild the entire website. With ISR, you can retain the benefits of static while expanding to millions of pages.
+
+When you add a new article in Notion, or re-edit an old article, the article information will be synchronized to your NotinNext site in just a few seconds.
