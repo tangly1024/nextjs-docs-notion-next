@@ -1,0 +1,31 @@
+# 个性化配置
+
+在项目的[blog.config.js](https://github.com/tangly1024/NotionNext/blob/main/blog.config.js)文件中，你可以方便地配置样式的主题，编辑提交后，Vercel会自动部署你的新配置。
+
+
+![blog.config.js](/features-personality.png)
+
+## 支持的配置列表
+
+
+| 配置项 | 功能说明 | 示例 | 备注 |
+| --- | --- | --- |--- |
+| `title` | 站点名称 | `小唐笔记` |  |
+| `author`| 博客作者 | `tangly1024` | |
+| `bio`| 作者简介| `一个普通的干饭人🍚` | 简单点 |
+| `email` | 联系邮箱 | `tlyong1992@hotmail.com` |  |
+| `link` | 网站地址 | `https://tangly1024.com` |  |
+| `description` | 站点描述 | `分享编程技术与记录生活` |  |
+| `keywords` | 站点关键词  | `['Notion', '写作', '博客']` |  |
+| `showHomeBanner`| 首页大图及问候语 |  `true` | [ true , false] |
+| `homeBannerStrings` | 问候语 | `['Hi，我是一个程序员', 'Hi，我是一个打工人', '...']`  | 需开启`showHomeBanner` 选项，支持多个字符|
+|`lang` | 站点默认语言 | `'zh-CN'` | 	|
+| `notionPageId` | Notion页面ID | `bee1fccfa3bd47a1a7be83cc71372d83` | **重要必填** |
+|`notionAccessToken` | NotionToken| ` `| 建议留空 |
+| `appearance` | 是否自动深色模式 | `'auto'` |  |
+|`font` | 文章字体 | `'font-sans tracking-wider subpixel-antialiased'` | 参考[tailwindcss字体](https://www.tailwindcss.cn/docs/font-family) |
+| `lightBackground`| 浅色模式背景色 | `'#eeeeee'`  | 使用16进制的色号|
+|`darkBackground` |深色模式背景色 | `'#111827'` | |
+| `path` | 网站绑定子目录 |` ` | 将网站部署在单独的目录下 |
+
+更多配置详见文档后续部分

@@ -1,6 +1,6 @@
 {
+  "personality": "Personality",
   "mdx": "MDX",
   "ssg": "Next.js SSG",
-  "i18n": "Next.js i18n",
-  "image": "Next.js Image"
+  "i18n": "Next.js i18n"
 }
