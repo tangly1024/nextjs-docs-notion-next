@@ -10,17 +10,30 @@
 Vercel将会创建一个NotionNext仓库，并且只需要点击几个简单的配置就能为你部署这个网站。一旦配置完成，你在代码仓库中的每个改动都会被自动地部署。
 
 
+## 设置你的Notion页面
+
+复制这个模板到你的notion中
+[Write Templates](https://www.notion.so/tanghh/02ab3b8678004aa69e9e415905ef32a5?v=cc5e82f4097741d7ba9e3d58f7bf7b15)
+
+并将复制后的页面id粘贴在 github项目中的 NOTION_PAGE_ID 参数中，
+
+例如
+
+`https://www.notion.so/tanghh/02ab3b8678004aa69e9e415905ef32a5?v=cc5e82f4097741d7ba9e3d58f7bf7b15 `
+
+上面这个notion页面的ID是 `02ab3b8678004aa69e9e415905ef32a5`
+
 ## 手动创建 
 
 NotionNext是基于 Next.js 开发的，在本地开发也十分简单，首先在Github上Clone项目  [NotionNext](https://github.com/tangly1024/NotionNext.git)。
 
-1. 本地安装 Next.js : `yarn add next`
+1. 本地安装 Next.js : `yarn install`
 
-2. 开发调试 : `yarn run dev`
+2. 开发调试预览 : `yarn run dev`
 
 3. 编译打包 : `yarn run build`
 
-4. 生产环境运行 ：  `yarn run start`
+4. 运行打包项目 ：  `yarn run start`
 
 
 ## 在vercel环境中预览与部署
