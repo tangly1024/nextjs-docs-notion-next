@@ -2,11 +2,17 @@
 
 在项目的[blog.config.js](https://github.com/tangly1024/NotionNext/blob/main/blog.config.js)文件中，你可以方便地配置样式的主题，编辑提交后，Vercel会自动部署你的新配置。
 
-
+## Vercel环境变量（推荐）
+大部分变量支持在Vercel平台中配置，而无需改动代码,这样做的好处是，当你更新代码时不用担心配置文件的冲突，并且有利于保护重要的APP_ID、APP_SECRET等隐私心细。
 ![blog.config.js](/features-personality.png)
 
-## 支持的配置列表
+### 配置方法
+Vercel控制后台-> `Settings` -> `Environment Variables` -> `Add New`
+在`NAME`中输入变量名称，在`VALUE`中输入变量的值，然后点击Add即可。变量支持区分不同环境PRODUCTION、PREVIEW、DEVELOPMENT
+![environment_variables.png](/environment_variables.png)
 
+## 一些配置项的说明
+可以直接在blog.config.js中查看说明
 
 | 配置项 | 功能说明 | 示例 | 备注 |
 | --- | --- | --- |--- |
