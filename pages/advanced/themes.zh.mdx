@@ -1,9 +1,20 @@
 import Callout from 'nextra-theme-docs/callout'
 # 主题切换
-项目支持多主题切换，切换方式参见代码中的 `/themes/index.js`
+只需修改代码中的 `/themes/index.js`文件即可实现多主题之间的切换。
+
+```javascript
+export * from './NEXT' // 这是当前启用的主题
+
+// 以下主题被关闭
+// export * from './Fukasawa'
+// export * from './Hexo'
+```
+
 
 目前支持以下主题：
 - Next
 ![Next Theme](/demo.png)
+- Hexo
+![Hexo Theme](/theme-hexo.png)
 - Fukasawa
 ![Fukasawa Theme](/theme-fukasawa.png)

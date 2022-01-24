@@ -1,12 +1,20 @@
-# Themes
+import Callout from 'nextra-theme-docs/callout'
+# Theme switch
+Just modify the `/themes/index.js` file in the code to switch between multiple themes.
 
-Nextra itself is basically a plugin that normalizes your Markdown routes in Next.js into structural data, and it doesn't handle any styling related thing. A **theme** is what renders your actual pages, it works like a layout component in React.
+```javascript
+export * from './NEXT' // the Theme effect
 
-Nextra has 2 official themes that you can use:
+// other theme
+// export * from './Fukasawa'
+// export * from './Hexo'
+```
 
-- [Docs Theme](/themes/docs)
-- [Blog Theme](/themes/blog)
 
-You can also extend your own themes. Here's a great starter example by [@jaredpalmer](https://github.com/jaredpalmer):
-
-- [Nextra Blank Custom Theme/Boilerplate Example](https://github.com/jaredpalmer/nextra-blank-custom-theme)
+The following themes are currently supported:
+- Next
+![Next Theme](/demo.png)
+- Hexo
+![Hexo Theme](/theme-hexo.png)
+- Fukasawa
+![Fukasawa Theme](/theme-fukasawa.png)
