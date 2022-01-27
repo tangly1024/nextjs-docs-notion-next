@@ -1,0 +1,117 @@
+import Callout from 'nextra-theme-docs/callout'
+# 主题切换
+博客的样式都在`themes/`路径下，由`/themes/index.js`中的代码控制当前展示的路径。
+
+```javascript
+export * from './NEXT' // 这是当前启用的主题
+
+// 以下是被关闭的主题
+// export * from './Fukasawa'
+// export * from './Hexo'
+```
+
+
+目前支持以下3个主题，在每个主题下有一个 `config_主题.js`文件，可以进行样式配置。
+## Next
+![Next Theme](/demo.png)
+
+以下是`/theme/NEXT/config_next.js`的内容
+```javascript
+const CONFIG_NEXT = {
+
+  HOME_BANNER: false, // 首页是否显示大图及标语 [true,false]
+  HOME_BANNER_Strings: ['Hi，我是一个程序员', 'Hi，我是一个打工人', 'Hi，我是一个干饭人', '欢迎来到我的博客🎉'], // 首页大图标语文字
+  HOME_BANNER_IMAGE: './bg_image.jpg', // 背景图地址
+
+  NAV_TYPE: 'normal', // ['fixed','autoCollapse','normal'] 分别是固定屏幕顶部、屏幕顶部自动折叠，不固定
+
+  POST_LIST_TYPE: 'page', // ['page','scroll] 文章列表样式:页码分页、单页滚动加载
+  POST_LIST_COVER: false, // 文章列表显示封面图
+  POST_LIST_PREVIEW: true, // 显示文章预览
+  POST_LIST_SUMMARY: false, // 显示用户自定义摘要，有预览时优先只展示预览
+
+  // 右侧组件
+  RIGHT_BAR: false, // 是否显示右侧栏
+  RIGHT_LATEST_POSTS: false, // 右侧栏最新文章
+  RIGHT_CATEGORY_LIST: false, // 右侧边栏文章分类列表
+  RIGHT_TAG_LIST: false, // 右侧边栏标签分类列表
+  RIGHT_AD: false, // 右侧广告
+
+  // 菜单
+  MENU_ABOUT: false, // 显示关于
+  MENU_CATEGORY: true, // 显示分类
+  MENU_TAG: true, // 显示标签
+  MENU_ARCHIVE: true, // 显示归档
+  MENU_SEARCH: true, // 显示搜索
+
+  // 悬浮挂件
+  WIDGET_PET: false, // 是否显示宠物挂件
+  WIDGET_PET_LINK: 'https://cdn.jsdelivr.net/npm/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json', // 挂件模型地址 @see https://github.com/xiazeyu/live2d-widget-models
+  WIDGET_TO_TOP: true, // 是否显示回顶
+  WIDGET_TO_BOTTOM: false, // 显示回底
+  WIDGET_DARK_MODE: false, // 显示日间/夜间模式切换
+  WIDGET_TOC: true, // 移动端显示悬浮目录
+
+  ARTICLE_SHARE: false, // 文章分享功能
+  ARTICLE_RELATE_POSTS: true, // 相关文章推荐
+  ARTICLE_COPYRIGHT: true // 文章版权声明
+
+}
+
+export default CONFIG_NEXT
+```
+
+## Hexo
+![Hexo Theme](/theme-hexo.png)
+以下是`/theme/Hexo/config_hexo.js`的内容
+
+```javascript
+const CONFIG_HEXO = {
+  HOME_BANNER_ENABLE: true,
+  HOME_BANNER_GREETINGS: ['Hi，我是一个程序员', 'Hi，我是一个打工人', 'Hi，我是一个干饭人', '欢迎来到我的博客🎉'], // 首页大图标语文字
+  HOME_BANNER_IMAGE: './bg_image.jpg', // see /public/bg_image.jpg
+
+  // 菜单
+  MENU_ABOUT: false, // 显示关于
+  MENU_CATEGORY: true, // 显示分类
+  MENU_TAG: true, // 显示标签
+  MENU_ARCHIVE: true, // 显示归档
+  MENU_SEARCH: true, // 显示搜索
+
+  POST_LIST_COVER: true, // 文章封面
+  POST_LIST_SUMMARY: true, // 文章摘要
+  POST_LIST_PREVIEW: false, // 读取文章预览
+  NAV_TYPE: 'autoCollapse', // ['fixed','autoCollapse','normal'] 分别是固定屏幕顶部、屏幕顶部自动折叠，不固定
+
+  WIDGET_TO_TOP: true,
+  WIDGET_TOC: true // 移动端悬浮目录
+}
+export default CONFIG_HEXO
+```
+
+## Fukasawa
+![Fukasawa Theme](/theme-fukasawa.png)
+
+以下是`/theme/Fukasawa/config_fuka.js`的内容
+
+```javascript
+const FUKA_CONFIG = {
+
+  POST_LIST_COVER: true, // 文章列表显示图片封面
+  POST_LIST_PREVIEW: false, // 显示文章预览
+
+  // 菜单
+  MENU_ABOUT: true, // 显示关于
+  MENU_CATEGORY: true, // 显示分类
+  MENU_TAG: true, // 显示标签
+  MENU_ARCHIVE: true, // 显示归档
+  MENU_SEARCH: true // 显示搜索
+
+}
+export default FUKA_CONFIG
+```
+
+## Empty 空主题
+`themes/Empty`目录下是一个空的模板，当创建一套新的主题时，可以复制该目录进行开发。
+主题样式采用的是`React`+`TailwindCss`框架开发，欢迎各位技术大神们一起提交自己的主题~
+

@@ -1,5 +1,6 @@
 {
   "personality":"个性化配置",
+  "themes":"主题切换",
   "notion": "渲染样式",
   "ssg": "SSG",
   "i18n": "多语言 I18n"
