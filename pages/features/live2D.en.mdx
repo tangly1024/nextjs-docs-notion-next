@@ -1,0 +1,17 @@
+# Liv2D 看板挂件
+
+"Live2D" is a drawing rendering technology applied to video games, which is developed by Japanese Cybernoids Company. Through a series of continuous images and character modeling to generate a 2D image that resembles a 3D model, it is very useful for animation-based adventure games. The disadvantage is that Live 2D characters cannot turn around a lot. The developers are trying to Allows the technology to display 360-degree images.
+
+Currently only the Next theme is adapted to the Live2D widget
+
+## Open method
+Edit [/themes/NEXT/config_next.js](https://github.com/tangly1024/NotionNext/blob/main/themes/NEXT/config_next.js) set `WIDGET_PET`=`true`～，
+
+```javascript
+  WIDGET_PET: false, // Show pet
+  WIDGET_PET_LINK: 'https://cdn.jsdelivr.net/npm/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json', // 挂件模型地址 @see https://github.com/xiazeyu/live2d-widget-models
+```
+
+## More models
+Of course, you can also configure other models in `WIDGET_PET_LINK`，the model address refers to the project[live2d-widget-models](https://github.com/xiazeyu/live2d-widget-models)
+Model preview [live2d-plugin-2.0](https://huaji8.top/post/live2d-plugin-2.0)
