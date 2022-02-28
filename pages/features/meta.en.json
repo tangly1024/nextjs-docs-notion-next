@@ -4,5 +4,6 @@
   "mdx": "MDX",
   "live2D": "Live2D Widget",
   "ssg": "Next.js SSG",
-  "i18n": "Next.js i18n"
+  "i18n": "Next.js i18n",
+  "singlePage": "Single Page"
 }
