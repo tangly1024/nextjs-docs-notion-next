@@ -4,6 +4,9 @@ const withNextra = require('nextra')({
   unstable_staticImage: true,
 })
 module.exports = withNextra({
+  devIndicators: {
+    autoPrerender: false,
+  },
   i18n: {
     locales: ['en', 'zh', 'de'],
     defaultLocale: 'en',
