@@ -1,19 +1,21 @@
 import Callout from 'nextra-theme-docs/callout'
 # 主题切换
-博客的样式都在`themes/`路径下，由`/themes/index.js`中的代码控制当前展示的路径。
+由 `/blog.config.js` 中的代码控制当前展示的路径。
 
 ```javascript
-export * from './NEXT' // 这是当前启用的主题
+const BLOG = {
+    ...
+    THEME: process.env.NEXT_PUBLIC_THEME || 'next', // 主题， 支持 ['next','hexo',"fukasawa','medium']
+    ...
+}
 
-// 以下是被关闭的主题
-// export * from './Fukasawa'
-// export * from './Hexo'
+// 可配置VERCEL环境变量NEXT_PUBLIC_THEME，或者修改上面的 'next' 字段即可。
 ```
 
 
 目前支持以下3个主题，在每个主题下有一个 `config_主题.js`文件，可以进行样式配置。
 ## Next
-- 预览站点: [notion-hexo.tangly1024.com](https://notion-hexo.tangly1024.com)
+- [预览next主题](https://preview.tangly1024.com/?theme=next)
 - 主题截图:
 ![Next Theme](/theme-next.png)
 
@@ -68,7 +70,7 @@ export default CONFIG_NEXT
 
 
 ## Hexo
-- 预览站点: [notion-hexo.tangly1024.com](https://notion-hexo.tangly1024.com)
+- [预览Hexo主题](https://preview.tangly1024.com/?theme=hexo)
 - 主题截图:
 ![Hexo Theme](/theme-hexo.png)
 
@@ -132,11 +134,12 @@ export default FUKA_CONFIG
 
 
 ## Medium
-- 预览站点: [notion-medium.tangly1024.com](https://notion-medium.tangly1024.com)
+- [预览Medium主题](https://preview.tangly1024.com/?theme=medium)
 - 主题截图:
 ![Medium Theme](/theme-medium.png)
 
 ## Empty 空主题
+- [预览Empty主题](https://preview.tangly1024.com/?theme=empty)
 `themes/Empty`目录下是一个空的模板，当创建一套新的主题时，可以复制该目录进行开发。
 主题样式采用的是`React`+`TailwindCss`框架开发，欢迎各位技术大神们一起提交自己的主题~
 
