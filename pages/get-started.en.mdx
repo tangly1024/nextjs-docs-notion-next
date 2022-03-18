@@ -1,5 +1,8 @@
 # Get Started
 
+## What is NotionNext
+see 
+[Introduction](/)。
 ## Quick Start with Vercel
 
 You can start by create your own Notion site and deploy to Vercel by clicking the link:
@@ -11,20 +14,32 @@ Vercel will create the NotionNext repository and deploy the site for you with ju
 Once done, every change in the repository will be deployed automatically.
 
 
-## 手动创建 
+## Config your Notion Page ID
+
+1.Duplicate this [Template](https://www.notion.so/tanghh/02ab3b8678004aa69e9e415905ef32a5?v=cc5e82f4097741d7ba9e3d58f7bf7b15) to your notion workspace.
+
+2.Share the page to internet，and get your PAGE_ID
+
+ - example: my id is *02ab3b8678004aa69e9e415905ef32a5*
+
+ > `https://www.notion.so/tanghh/02ab3b8678004aa69e9e415905ef32a5?v=cc5e82f4097741d7ba9e3d58f7bf7b15 `
+
+3. Update the NOTION_PAGE_ID of your blog.config.js in the github repository。
+
+## Development
 
 NotionNext is developed based on Next.js, and it is very easy to develop locally. First, Clone project on Github  [NotionNext](https://github.com/tangly1024/NotionNext.git)。
 
-1. 本地安装 Next.js : `yarn add next`
+1. Install Next.js : `yarn add next`
 
-2. 开发调试 : `yarn run dev`
+2. Development : `yarn run dev`
 
-3. 编译打包 : `yarn run build`
+3. Build a production package : `yarn run build`
 
-4. 生产环境运行 ：  `yarn run start`
+4. Run on server ：  `yarn run start`
 
 
-## 在vercel环境中预览与部署
+## Deploy and preview on Vercel
 
 1. Install Vercel ： `yarn add vercel`
 
