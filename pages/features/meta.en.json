@@ -1,9 +1,10 @@
 {
   "personality": "Personality",
   "themes":"Themes",
-  "mdx": "MDX",
+  "articleLock":"Article Lock",
   "live2D": "Live2D Widget",
-  "ssg": "Next.js SSG",
+  "mdx": "MDX",
   "i18n": "Next.js i18n",
+  "ssg": "Next.js SSG",
   "singlePage": "Single Page"
 }
