@@ -3,44 +3,16 @@
 ## 什么是NotionNext
 详见[介绍](/zh)。
 
-## 通过Vercel快速开始
+## 快速起步
 
-点击以下链接，开始创建你自己的Notion博客、并部署到Vercel托管平台 
+- 给[这个项目点](https://github.com/tangly1024/NotionNext)个小星星 😉
+- 将 [这个 Notion 模板](https://tanghh.notion.site/02ab3b8678004aa69e9e415905ef32a5) 制作副本，并分享这个页面给所有人
+- [Fork](https://github.com/tangly1024/NotionNext/fork) 这个项目
+  - _(可选)_ 用自己的图片替换 `/public` 文件夹里的 `avatar.jpg`、`favicon.svg` 和 `favicon.ico`
+- 在 [Vercel](https://vercel.com)中部署项目,并设置以下环境变量
+    - `NOTION_PAGE_ID` (必填):你前面分享到互联网的Notion页面ID,通常是你空间地址之后的32位数字。
+    - `NOTION_ACCESS_TOKEN` (可选，不推荐): 如果你不打算将notion页面分享到网络上，则需要设置此项。要注意的是Notion的token有效期是180天，你需要在Vercel的控制台中定期手动刷新，另外，Notion数据库中的图片用这种方式可能无法展示。
 
-[![](https://vercel.com/button)](https://vercel.com/new/clone?demo-description=Notion%20powered%20site%20Built%20with%20Next.js.&demo-image=https%3A%2F%2Fdocs.tangly1024.com%2Fdemo.png&demo-title=Notion%20Next%20Blog&demo-url=https%3A%2F%2Fblog.tangly1024.com%2F&project-name=notion-next-blog&repository-name=NotionNexts&s=https%3A%2F%2Fgithub.com%2Ftangly1024%2FNotionNext
-)
+- **稍微等等就可以访问了！** 简单吗?
 
-Vercel将会创建一个NotionNext仓库，并且只需要点击几个简单的配置就能为你部署这个网站。一旦配置完成，你在代码仓库中的每个改动都会被自动地部署。
-
-
-## 设置你的Notion页面
-
-1.复制这个[Notion模板](https://www.notion.so/tanghh/02ab3b8678004aa69e9e415905ef32a5?v=cc5e82f4097741d7ba9e3d58f7bf7b15)到你的notion中
-
-2.将你复制后的页面share到互联网，并在页面的访问网址中获取你的页面ID。
-
- - 例如下面这个页面的id是 *02ab3b8678004aa69e9e415905ef32a5*
-
- > `https://www.notion.so/tanghh/02ab3b8678004aa69e9e415905ef32a5?v=cc5e82f4097741d7ba9e3d58f7bf7b15 `
-
-3. 在你的Github仓库中修改blog.config.js的 NOTION_PAGE_ID字段并提交即可。
-## 本地开发
-
-NotionNext是基于 Next.js 开发的，在本地开发也十分简单，首先在Github上Clone项目  [NotionNext](https://github.com/tangly1024/NotionNext.git)。
-
-1. 本地安装 Next.js : `yarn install`
-
-2. 开发调试预览 : `yarn run dev`
-
-3. 编译打包 : `yarn run build`
-
-4. 运行打包项目 ：  `yarn run start`
-
-
-## 在Vercel环境中预览与部署
-
-1. 本地安装 Vercel ： `yarn add vercel`
-
-2. 预览到线上  : `vercel`
-
-3. 生产版本发布线上  ： `vercel --prod`
+更多说明请移至[我的博客](https://tangly1024.com/article/notion-next)查看

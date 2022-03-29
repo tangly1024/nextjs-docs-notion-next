@@ -1,48 +1,20 @@
 # Get Started
 
 ## What is NotionNext
-see 
+see
 [Introduction](/)。
-## Quick Start with Vercel
 
-You can start by create your own Notion site and deploy to Vercel by clicking the link:
+## Quick Start
 
-[![](https://vercel.com/button)](https://vercel.com/new/clone?demo-description=Notion%20powered%20site%20Built%20with%20Next.js.&demo-image=https%3A%2F%2Fdocs.tangly1024.com%2Fdemo.png&demo-title=Notion%20Next%20Blog&demo-url=https%3A%2F%2Fblog.tangly1024.com%2F&project-name=notion-next-blog&repository-name=NotionNexts&s=https%3A%2F%2Fgithub.com%2Ftangly1024%2FNotionNext
-)
+- Star this repo 😉
+- Duplicate [this Notion template](https://craigary.notion.site/adc3552cfc73442ab5048d4b1eb0079a), and share it to the public
+- [Fork](https://github.com/craigary/nobelium/fork) this project
+- Customize `blog.config.js`
+- _(Optional)_ Replace `favicon.svg`, and `favicon.ico` in `/public` folder with your own
+- Deploy on [Vercel](https://vercel.com), set following environment variables：
+  - `NOTION_PAGE_ID` (Required): The ID of the Notion page you previously shared to the web, usually has 32 digits after your workspace address
+  - `NOTION_ACCESS_TOKEN` (Optional, not recommended): If you decide not to share your database, you can use token to let Nobelium grab data from Notion database. You can find it in your browser cookies called `token_v2`
+    - Keep in mind Notion token is only valid for 180 days, make sure to update manually in vercel dashboard, we probably switch to Official API to resolve this issue in the future. Also, images in Notion database will not properly rendered
+- **That's it!** Easy-peasy?
 
-Vercel will create the NotionNext repository and deploy the site for you with just a few clicks.  
-Once done, every change in the repository will be deployed automatically.
-
-
-## Config your Notion Page ID
-
-1.Duplicate this [Template](https://www.notion.so/tanghh/02ab3b8678004aa69e9e415905ef32a5?v=cc5e82f4097741d7ba9e3d58f7bf7b15) to your notion workspace.
-
-2.Share the page to internet，and get your PAGE_ID
-
- - example: my id is *02ab3b8678004aa69e9e415905ef32a5*
-
- > `https://www.notion.so/tanghh/02ab3b8678004aa69e9e415905ef32a5?v=cc5e82f4097741d7ba9e3d58f7bf7b15 `
-
-3. Update the NOTION_PAGE_ID of your blog.config.js in the github repository。
-
-## Development
-
-NotionNext is developed based on Next.js, and it is very easy to develop locally. First, Clone project on Github  [NotionNext](https://github.com/tangly1024/NotionNext.git)。
-
-1. Install Next.js : `yarn add next`
-
-2. Development : `yarn run dev`
-
-3. Build a production package : `yarn run build`
-
-4. Run on server ：  `yarn run start`
-
-
-## Deploy and preview on Vercel
-
-1. Install Vercel ： `yarn add vercel`
-
-2. Preview the site  : `vercel`
-
-3. Publish website  ： `vercel --prod`
+please visiit my [blog](https://tangly1024.com/article/notion-next) for more information.
