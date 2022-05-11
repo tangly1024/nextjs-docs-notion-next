@@ -1,11 +1,19 @@
 # 个性化配置
 
+站点信息会读取你的Notion页面，而主题等更详细的配置可以修改代码中的blog.config.js文件。
+
+## 1.从Notion读取配置
+网站的作者头像、站点标题、站点描述，分别读取自你Notion页面中的页面ICON、页面标题与页面描述。你只要修改页面的这些信息，即可实时同步到你的站点中。
+![notion-template](/notion-template.png)
+
+
+## 2.从代码配置读取
 在项目的[blog.config.js](https://github.com/tangly1024/NotionNext/blob/main/blog.config.js)文件中，你可以方便地配置样式的主题，编辑提交后，Vercel会自动部署你的新配置。
 ![blog.config.js](/features-personality.png)
 
-
-## Vercel环境变量
+## 3.从Vercel环境变量读取
 部分变量支持在Vercel平台中配置，这样有利于保护重要的APP_ID、APP_SECRET等隐私信息。
+
 ### 配置方法
 Vercel控制后台-> `Settings` -> `Environment Variables` -> `Add New`
 在`NAME`中输入变量名称，在`VALUE`中输入变量的值，然后点击Add即可。

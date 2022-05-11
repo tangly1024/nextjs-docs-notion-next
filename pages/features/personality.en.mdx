@@ -1,1 +1,27 @@
-# Personality
+# Personalized configuration
+
+Site information will read your notion page, and a more detailed configuration of themes can modify the blog.config.js file in the code.
+
+## Read configuration from Notion
+
+The author avatar, site title, and site description of the website are read from the notion's page icon, page title, and page description in your Notion page, respectively. As long as you modify the information on the page, it can be synchronized to your site in real time.
+![notion-template](/notion-template.png)
+
+## Read configuration from blog.config.just
+
+In the project's blog.config.js file, you can easily configure the theme of the style, and after editing and submitting, Vercel will automatically deploy your new configuration.
+![blog.config.js](/features-personality.png)
+
+
+## Vercel Environment Variables
+
+Some variables support configuration in the Vercel platform, which is conducive to protecting important privacy information such as APP_ID and APP_SECRET.
+
+### Steps
+
+Vercel  -> Settings -> Environment Variables -> Add New Enter the variable name in NAME, enter the value of the variable in VALUE, and then click Add.environment_variables
+
+### How the configuration takes effect
+
+To make environment variables take effect after recompiling the project, you can find the Redeploy option in the console of vercel and use the previously compiled cache for quick compilation.
+![environment_valid](/environment-valid.png)
