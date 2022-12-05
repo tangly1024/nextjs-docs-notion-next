@@ -1,7 +1,6 @@
 {
-  "index": "介绍",
-  "get-started": "快速开始",
-  "features": "特性",
-  "themes": "主题",
-  "changelog":"更新日志"
+    "index": "介绍",
+    "get-started": "快速开始",
+    "changelog": "更新日志",
+    "features": "特性"
 }
